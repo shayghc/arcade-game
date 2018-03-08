@@ -9,6 +9,14 @@ class Enemy {
         this.sprite = 'images/enemy-bug.png';
     }
 
+    spawn() {
+        // set x to start enemy off of the left side of screen
+        this.x =
+        //set y for random row
+
+        //set random speed for enemy
+    }
+
     // Update the enemy's position, required method for game
     // Parameter: dt, a time delta between ticks
     update(dt) {
@@ -19,6 +27,7 @@ class Enemy {
 
     // Draw the enemy on the screen, required method for game
     render() {
+
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 }
