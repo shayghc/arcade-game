@@ -59,7 +59,7 @@ for (let i = 0; i < enemies; i++) {
     allEnemies.push(new Enemy());
 }
 // Place the player object in a variable called player
-
+let player = new Player();
 
 
 // This listens for key presses and sends the keys to your
