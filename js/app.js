@@ -13,8 +13,9 @@ class Enemy {
         // set x to start enemy off of the left side of screen
         this.x =
         //set y for random row
-
+        this.y =
         //set random speed for enemy
+        this.velocity =
     }
 
     // Update the enemy's position, required method for game
@@ -70,6 +71,16 @@ for (let i = 0; i < enemies; i++) {
 // Place the player object in a variable called player
 let player = new Player();
 
+
+// Helper functions ********************************************************
+/**
+ * Returns a random integer between min (inclusive) and max (inclusive)
+ * Using Math.round() will give you a non-uniform distribution!
+ * This function is explained at http://stackoverflow.com/a/1527820/11926
+ */
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
