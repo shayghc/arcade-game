@@ -23,10 +23,6 @@ class Enemy {
     }
 }
 
-
-
-
-
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
@@ -34,6 +30,11 @@ class Enemy {
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
+let allEnemies = [];
+let enemies = 4;
+for (let i = 0; i < enemies; i++) {
+    allEnemies.push(new Enemy());
+}
 // Place the player object in a variable called player
 
 
