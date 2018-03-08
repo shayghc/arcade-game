@@ -25,11 +25,15 @@ class Enemy {
         // You should multiply any movement by the dt parameter
         // which will ensure the game runs at the same speed for
         // all computers.
+        // Update x coord with velocity over time
+        this.x = Math.round(this.x + this.velocity * dt);
+        if (this.x > ctx.canvas.width) {
+            this.spawn();
+        }
     }
 
     // Draw the enemy on the screen, required method for game
     render() {
-
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
@@ -73,7 +77,7 @@ do {
                 '1: for Easy\n' +
                 '2: for Medium\n' +
                 '3: for Hard'));
-} while(level < 1 || level > 3);
+} while (level < 1 || level > 3);
 let enemies = level + 2;
 for (let i = 0; i < enemies; i++) {
     allEnemies.push(new Enemy());
