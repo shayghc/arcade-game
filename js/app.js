@@ -24,7 +24,22 @@ class Enemy {
 }
 
 // Now write your own player class
+let Player = function() {
 
+};
+// This class requires an update(), render() and
+// a handleInput() method.
+Player.prototype.update() {
+
+};
+
+Player.prototype.render() {
+
+};
+
+Player.prototype.handleInput() {
+
+};
 
 
 // Now instantiate your objects.
