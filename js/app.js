@@ -31,7 +31,16 @@ class Enemy {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 let allEnemies = [];
-let enemies = 4;
+// Set game difficulty level
+let level = 0;
+do {
+    level = Number(prompt('Select game difficulty.\n' +
+                'Please enter number of enemies:\n' +
+                '1: for Easy\n' +
+                '2: for Medium\n' +
+                '3: for Hard'));
+} while(level < 1 || level > 3);
+let enemies = level + 2;
 for (let i = 0; i < enemies; i++) {
     allEnemies.push(new Enemy());
 }
