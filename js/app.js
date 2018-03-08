@@ -54,15 +54,15 @@ let Player = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 Player.prototype.update = function() {
-
+    // Something happens here
 };
 
 Player.prototype.render = function() {
-
+    // Something happens here
 };
 
 Player.prototype.handleInput = function() {
-
+    // Something happens here
 };
 
 
