@@ -1,22 +1,20 @@
 // Enemies our player must avoid
 class Enemy {
     constructor() {
-        // Variables applied to each of our instances go here,
-        // we've provided one for you to get started
-        let numRows = 6;
-        let numCols = 5;
-        // The image/sprite for our enemies, this uses
-        // a helper we've provided to easily load images
+        // Variables applied to each of our instances go here
+        // The image/sprite for our enemies
         this.sprite = 'images/enemy-bug.png';
+        // Initial positional x and y values and velocity called in the spawn() function
+        this.spawn();
     }
 
     spawn() {
         // set x to start enemy off of the left side of screen
-        this.x = -(ctx.canvas.width / this.numCols);
+        this.x = -101;
         // set y for random row
-        this.y = this.getRandomInt(1, 3) * (ctx.canvas.height / this.numRows);
+        this.y = this.getRandomInt(1, 3) * 83 - 20;
         // set random speed for enemy
-        this.velocity = 100 * this.getRandomInt(1, 4);
+        this.enemyVelocity = this.getRandomInt(90, 110) * this.getRandomInt(1, 4);
     }
 
     // Update the enemy's position, required method for game
@@ -26,7 +24,7 @@ class Enemy {
         // which will ensure the game runs at the same speed for
         // all computers.
         // Update x coord with velocity over time
-        this.x = Math.round(this.x + this.velocity * dt);
+        this.x = Math.round(this.x + this.enemyVelocity * dt);
         if (this.x > ctx.canvas.width) {
             this.spawn();
         }
@@ -47,9 +45,10 @@ class Enemy {
     }
 }
 
+
 // Now write your own player class
 let Player = function() {
-
+    
 };
 // This class requires an update(), render() and
 // a handleInput() method.
