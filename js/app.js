@@ -4,7 +4,7 @@ class Enemy {
         // Variables applied to each of our instances go here
         // The image/sprite for our enemies
         this.sprite = 'images/enemy-bug.png';
-        // Initial positional x and y values and velocity called in the spawn() function
+        // Initial positional x and y values and velocity are called in the spawn() function
         this.spawn();
     }
 
@@ -32,6 +32,14 @@ class Enemy {
 
     // Draw the enemy on the screen, required method for game
     render() {
+        // Check for collision with player sprite
+        this.width = this.x + 101;
+        if (this.width > player.x + 25 && this.x < player.x +101) {
+            if (this.y > player.y - 30 && this.y < player.y + 30) {
+                //Reset player position if collision detected
+                player.spawn();
+            }
+        }
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
@@ -48,10 +56,14 @@ class Enemy {
 
 // Now write your own player class
 let Player = function() {
+    this.sprite = 'images/char-boy.png';
+    this.spawn();
+};
+
+Player.prototype.spawn = function() {
     this.x = 202;
     this.y = 5 * 83 - 8; // 5th row, 83 from engine.js, line 137. 8 is an offset to centre the sprite.
-    this.sprite = 'images/char-boy.png';
-};
+}
 // This class requires an update(), render() and
 // a handleInput() method.
 Player.prototype.update = function() {
@@ -107,7 +119,7 @@ do {
                 '2: for Medium\n' +
                 '3: for Hard'));
 } while (level < 1 || level > 3);
-let enemies = level + 2;
+let enemies = level;
 for (let i = 0; i < enemies; i++) {
     allEnemies.push(new Enemy());
 }
