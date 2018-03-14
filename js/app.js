@@ -1,7 +1,17 @@
 // Global variables for app.js
 let colWidth = 101;
 let rowHeight = 83;
-let total =0;
+let total = 0;
+
+// Implement game score tracking
+const score = {
+    increment: function() {
+        total += 1;
+    },
+    decrement: function() {
+        total = Math.max(total - 1, 0);
+    }
+};
 
 // Enemies our player must avoid
 class Enemy {
@@ -46,6 +56,7 @@ class Enemy {
                 setTimeout(function() {
                     player.spawn();
                 }, 50);
+                score.decrement();
             }
         }
         ctx.font = "italic bold 20px Pangolin";
@@ -86,6 +97,7 @@ Player.prototype.render = function() {
         setTimeout(function() {
             player.spawn();
         }, 150);
+        score.increment();
     }
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
