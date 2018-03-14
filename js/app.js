@@ -1,3 +1,7 @@
+// Global variables for app.js
+let colWidth = 101;
+let rowHeight = 83;
+
 // Enemies our player must avoid
 class Enemy {
     constructor() {
@@ -10,9 +14,9 @@ class Enemy {
 
     spawn() {
         // set x to start enemy off of the left side of screen
-        this.x = -101;
+        this.x = -colWidth;
         // set y for random row
-        this.y = this.getRandomInt(1, 3) * 83 - 20;
+        this.y = this.getRandomInt(1, 3) * rowHeight - 20;
         // set random speed for enemy
         this.enemyVelocity = this.getRandomInt(90, 110) * this.getRandomInt(1, 4);
     }
@@ -34,8 +38,8 @@ class Enemy {
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
         // Check for collision with player sprite
-        this.width = this.x + 101;
-        if (this.width > player.x + 25 && this.x < player.x +101) {
+        this.width = this.x + colWidth;
+        if (this.width > player.x + 25 && this.x < player.x + colWidth) {
             if (this.y > player.y - 30 && this.y < player.y + 30) {
                 //Reset player position if collision detected
                 setTimeout(function() {
@@ -64,8 +68,8 @@ let Player = function() {
 };
 
 Player.prototype.spawn = function() {
-    this.x = 202;
-    this.y = 5 * 83 - 8; // 5th row, 83 from engine.js, line 137. 8 is an offset to centre the sprite.
+    this.x = colWidth * 2;
+    this.y = 5 * rowHeight - 8; // 5th row, 83 from engine.js, line 137. 8 is an offset to centre the sprite.
 }
 // This class requires an update(), render() and
 // a handleInput() method.
@@ -83,29 +87,28 @@ Player.prototype.render = function() {
 };
 
 Player.prototype.handleInput = function(keycode) {
-    // Something happens here
     switch(keycode) {
         case 'ctrl':
-            //
+            // Not used at this stage
             break;
         case 'left':
             if (this.x > 0) {
-                this.x = this.x - 101;
+                this.x = this.x - colWidth;
             }
             break;
         case 'up':
             if (this.y > 0) {
-                this.y = this.y - 83;
+                this.y = this.y - rowHeight;
             }
             break;
         case 'right':
-            if (this.x < 404) {
-                this.x = this.x + 101;
+            if (this.x < colWidth * 4) {
+                this.x = this.x + colWidth;
             }
             break;
         case 'down':
-            if (this.y < 4 * 83) {
-                this.y = this.y + 83;
+            if (this.y < 4 * rowHeight) {
+                this.y = this.y + rowHeight;
             }
             break;
         default:
