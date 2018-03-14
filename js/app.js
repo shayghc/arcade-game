@@ -56,7 +56,8 @@ class Enemy {
 }
 
 
-// Now write your own player class
+// Now write your own player class.
+// Class not used as this is for a single entity.
 let Player = function() {
     this.sprite = 'images/char-boy.png';
     this.spawn();
