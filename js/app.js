@@ -1,6 +1,7 @@
 // Global variables for app.js
 let colWidth = 101;
 let rowHeight = 83;
+let total =0;
 
 // Enemies our player must avoid
 class Enemy {
@@ -47,6 +48,8 @@ class Enemy {
                 }, 50);
             }
         }
+        ctx.font = "italic bold 20px Pangolin";
+        ctx.fillText("Score: " + total.toString(), 5, 570);
     }
 
     /**
@@ -61,7 +64,7 @@ class Enemy {
 
 
 // Now write your own player class.
-// Class not used as this is for a single entity.
+// "class" not used as this is for a single entity.
 let Player = function() {
     this.sprite = 'images/char-boy.png';
     this.spawn();
@@ -69,7 +72,8 @@ let Player = function() {
 
 Player.prototype.spawn = function() {
     this.x = colWidth * 2;
-    this.y = 5 * rowHeight - 8; // 5th row, 83 from engine.js, line 137. 8 is an offset to centre the sprite.
+    // 5th row, 83 from engine.js, line 137 (rowHeight). 8 is an offset to centre the sprite.
+    this.y = 5 * rowHeight - 8;
 }
 // This class requires an update(), render() and
 // a handleInput() method.
@@ -133,6 +137,8 @@ let enemies = level + 2;
 for (let i = 0; i < enemies; i++) {
     allEnemies.push(new Enemy());
 }
+
+
 // Place the player object in a variable called player
 let player = new Player();
 
