@@ -9,7 +9,7 @@ const score = {
         total += 1;
     },
     decrement: function() {
-        total = Math.max(total - 1, 0);
+        total -= 1;
     }
 };
 
