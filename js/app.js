@@ -48,7 +48,9 @@ class Enemy {
 
 // Now write your own player class
 let Player = function() {
-    
+    this.x = 202;
+    this.y = 5 * 83 - 8; // 5th row, 83 from engine.js, line 137
+    this.sprite = 'images/char-boy.png';
 };
 // This class requires an update(), render() and
 // a handleInput() method.
