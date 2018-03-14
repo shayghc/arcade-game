@@ -49,7 +49,7 @@ class Enemy {
 // Now write your own player class
 let Player = function() {
     this.x = 202;
-    this.y = 5 * 83 - 8; // 5th row, 83 from engine.js, line 137
+    this.y = 5 * 83 - 8; // 5th row, 83 from engine.js, line 137. 8 is an offset to centre the sprite.
     this.sprite = 'images/char-boy.png';
 };
 // This class requires an update(), render() and
@@ -60,10 +60,38 @@ Player.prototype.update = function() {
 
 Player.prototype.render = function() {
     // Something happens here
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-Player.prototype.handleInput = function() {
+Player.prototype.handleInput = function(keycode) {
     // Something happens here
+    switch(keycode) {
+        case 'ctrl':
+            //
+            break;
+        case 'left':
+            if (this.x > 0) {
+                this.x = this.x - 101;
+            }
+            break;
+        case 'up':
+            if (this.y > 0) {
+                this.y = this.y - 83;
+            }
+            break;
+        case 'right':
+            if (this.x < 404) {
+                this.x = this.x + 101;
+            }
+            break;
+        case 'down':
+            if (this.y < 4 * 83) {
+                this.y = this.y + 83;
+            }
+            break;
+        default:
+            return;
+    }
 };
 
 
@@ -91,6 +119,7 @@ let player = new Player();
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
+        17: 'ctrl', // keycode identified using website, keycode.info
         37: 'left',
         38: 'up',
         39: 'right',
