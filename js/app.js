@@ -32,15 +32,17 @@ class Enemy {
 
     // Draw the enemy on the screen, required method for game
     render() {
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
         // Check for collision with player sprite
         this.width = this.x + 101;
         if (this.width > player.x + 25 && this.x < player.x +101) {
             if (this.y > player.y - 30 && this.y < player.y + 30) {
                 //Reset player position if collision detected
-                player.spawn();
+                setTimeout(function() {
+                    player.spawn();
+                }, 50);
             }
         }
-        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
     /**
@@ -71,7 +73,11 @@ Player.prototype.update = function() {
 };
 
 Player.prototype.render = function() {
-    // Something happens here
+    if (player.y < 10) {
+        setTimeout(function() {
+            player.spawn();
+        }, 150);
+    }
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
@@ -119,7 +125,7 @@ do {
                 '2: for Medium\n' +
                 '3: for Hard'));
 } while (level < 1 || level > 3);
-let enemies = level;
+let enemies = level + 2;
 for (let i = 0; i < enemies; i++) {
     allEnemies.push(new Enemy());
 }
