@@ -20,9 +20,6 @@ For detailed instructions on how to get started, check out this [guide](https://
 ## Win Condition
 You will receive a game won message once you reach the water for the tenth time. A pop-up will offer the chance to play a new game.
 
-## Attribution
-Much credit to the author of https://github.com/madrisan/js-games/tree/master/frogger. Reading the code there provided inspiration for the areas where I needed to study more in order to complete this project.
-
 ## Tips for future students
 Pay attention to the way that the coordinates are calculated in this code. I was unable to make a start with progressing this code with the main issue being that I could not even display the board before beginning to start coding the enemy and player. The Math elements were also not covered in any detail in the course to date which will present a real challenge in this project.
 
