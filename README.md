@@ -20,8 +20,5 @@ For detailed instructions on how to get started, check out this [guide](https://
 ## Win Condition
 You will receive a game won message once you reach the water for the tenth time. A pop-up will offer the chance to play a new game.
 
-## Tips for future students
-Pay attention to the way that the coordinates are calculated in this code. I was unable to make a start with progressing this code with the main issue being that I could not even display the board before beginning to start coding the enemy and player. The Math elements were also not covered in any detail in the course to date which will present a real challenge in this project.
-
 ## Contributing
 CONTRIBUTING.md contains contacts instructions for providing comment/feedback. I do not believe that I have produced the most efficient code possible and would welcome any feedback on alternative approaches to make the code more efficient.
