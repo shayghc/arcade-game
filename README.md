@@ -22,3 +22,21 @@ You will receive a game won message once you reach the water for the tenth time.
 
 ## Contributing
 CONTRIBUTING.md contains contacts instructions for providing comment/feedback. I do not believe that I have produced the most efficient code possible and would welcome any feedback on alternative approaches to make the code more efficient.
+
+## Tips for future students
+Follow the logical order provided in the instructions for the project. My approach proceeded as follows:
+1. Get the game board displayed on screen.
+2. Get the enemies displayed on screen.
+3. Get the player displayed on screen.
+4. Implement player movement controls.
+5. Implement player movement limits.
+6. Implement x-axis collision detection and player position reset.
+7. Implement y-axis collision detection and player position reset.
+8. Implement game score display.
+
+TODO:
+
+9. Implement game score decrement for collisions.
+10. Implement game score increment for player reaching the water.
+11. Implement game win condition and message display.
+12. Implement player sprite change option.
