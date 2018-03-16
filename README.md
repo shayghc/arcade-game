@@ -9,7 +9,7 @@ For detailed instructions on how to get started, check out this [guide](https://
 
 ## How to Play
 1. When the game loads you will receive a prompt to enter degree of game difficulty. Choose from: 1 for easy, 2 for medium and 3 for difficult.
-2. Your player will begin at the bottom middle of the game board. Use the `ctrl` key to change characters.
+2. Your player will begin at the bottom middle of the game board.
 3. Your player should be moved from the grass area at the bottom of the board to the water at the top of the board. You move the player by using the `arrow` keys.
 4. You will see bugs travelling from left to right across the board, at various speeds, in the paved area. These are your enemies and should be avoided.
 
@@ -33,10 +33,10 @@ Follow the logical order provided in the instructions for the project. My approa
 6. Implement x-axis collision detection and player position reset.
 7. Implement y-axis collision detection and player position reset.
 8. Implement game score display.
-
-TODO:
-
 9. Implement game score decrement for collisions.
 10. Implement game score increment for player reaching the water.
 11. Implement game win condition and message display.
+
+TODO:
+
 12. Implement player sprite change option.
