@@ -3,13 +3,14 @@ let colWidth = 101;
 let rowHeight = 83;
 let total = 0;
 
-// Implement game score tracking
-const score = {
-    increment: function() {
-        total += 1;
-    },
-    decrement: function() {
-        total -= 1;
+
+// Victory condition
+let victory = function() {
+    let refreshScreen = confirm('Congratulations\n\n' +
+                                'You win!\n\n' +
+                                'Play again?');
+    if (refreshScreen) {
+        setTimeout('location.reload(true);',500);
     }
 };
 
@@ -54,9 +55,11 @@ class Enemy {
             if (this.y > player.y - 30 && this.y < player.y + 30) {
                 //Reset player position if collision detected
                 setTimeout(function() {
+                    if (total > 0) {
+                        total--;
+                    }
                     player.spawn();
-                }, 50);
-                score.decrement();
+                }, 10);
             }
         }
         ctx.font = "italic bold 20px Pangolin";
@@ -90,15 +93,18 @@ Player.prototype.spawn = function() {
 // a handleInput() method.
 Player.prototype.update = function() {
     // Something happens here
+    if (player.y === -8) {
+        setTimeout(function() {
+            total++;
+            if (total === 10) {
+                victory();
+            }
+            player.spawn();
+        }, 10);
+    }
 };
 
 Player.prototype.render = function() {
-    if (player.y < 10) {
-        setTimeout(function() {
-            player.spawn();
-        }, 150);
-        score.increment();
-    }
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
