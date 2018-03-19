@@ -9,7 +9,7 @@ For detailed instructions on how to get started, check out this [guide](https://
 
 ## How to Play
 1. When the game loads you will receive a prompt to enter degree of game difficulty. Choose from: 1 for easy, 2 for medium and 3 for difficult.
-2. Your player will begin at the bottom middle of the game board.
+2. Your player will begin at the bottom middle of the game board. Use the `space` bar to change the player sprite.
 3. Your player should be moved from the grass area at the bottom of the board to the water at the top of the board. You move the player by using the `arrow` keys.
 4. You will see bugs travelling from left to right across the board, at various speeds, in the paved area. These are your enemies and should be avoided.
 
@@ -42,8 +42,8 @@ Follow the logical order provided in the instructions for the project. My approa
 9. Implement game score decrement for collisions.
 10. Implement game score increment for player reaching the water.
 11. Implement game win condition and message display.
+12. Implement player sprite change option - This required adding the images to **Resources.load()** in the **engine.js** file.
 
 **TODO:**
 
-12. Implement player sprite change option - This could not be completed due to a bug preventing the game running if any sprite other than char-boy.png was selected for the player object.
 13. Produce CSS modals to replace the use of the JS confirm, prompt and alert modals.
