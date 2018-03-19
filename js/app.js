@@ -168,6 +168,10 @@ Player.prototype.render = function() {
  */
 Player.prototype.handleInput = function(keycode) {
     switch(keycode) {
+        case 'space':
+            this.index = (this.index + 1) % 5;
+            this.sprite = this.sprites[this.index];
+            break;
         case 'left':
             if (this.x > 0) {
                 this.x = this.x - colWidth;
@@ -221,7 +225,7 @@ let player = new Player();
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
-        17: 'ctrl' // code from http://keycode.info/
+        32: 'space', // code from http://keycode.info/
         37: 'left',
         38: 'up',
         39: 'right',
