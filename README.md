@@ -15,7 +15,7 @@ For detailed instructions on how to get started, check out this [guide](https://
 
 ## Scoring
 1. Your will increase your game score by one every time you player reaches the water without colliding with an enemy.
-2. Every time you collide with an enemy you will lose one point from your game score.
+2. Every time you collide with an enemy you will lose one point from your game score (Zero is the minimum, the score will not progress to negative values).
 
 ## Win Condition
 You will receive a game won message once you reach the water for the tenth time. A pop-up will offer the chance to play a new game.
