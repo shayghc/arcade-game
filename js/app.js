@@ -1,7 +1,9 @@
 /**
  * @fileOverview Arcade Game project for Udacity FEWD Nanodegree course.
- * @author eamus Connolly <sghconnolly@gmail.com">
+ * @author Seamus Connolly <sghconnolly@gmail.com">
  * @version 2.0
+ * @license MIT license included in the LICENSE.txt file.
+ * @see jsdoc documentation is included in the "out" directory which is in the js directory.
  *
  * TODO:
  * A bug encountered in writing this code is that in Chrome, no sprite except "char-boy" would work.
@@ -58,7 +60,7 @@ class Enemy {
     /**
      * @function update
      * @description Calculates movement of the enemy object and resets position if object gets to edge of screen.
-     * @param {number} dt The dt parameter will ensure the game runs at the same speed forall computers: a time delta between ticks.
+     * @param {number} dt The dt parameter will ensure the game runs at the same speed for all computers: a time delta between ticks.
      */
     update(dt) {
         // Update x coord with velocity over time
@@ -71,7 +73,7 @@ class Enemy {
     // Draw the enemy on the screen, required method for game
     /**
      * @function render
-     * @description 1 Generates the sprite image on the game board
+     * @description 1 Generates the sprite image on the game board.
      * @description 2 Detects collisions between an enemy object and the player object, then resets the player position.
      * @description 3 Generates the score in the bottom left of the game board.
      */
