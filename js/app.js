@@ -45,7 +45,7 @@ class Enemy {
     }
 
     /**
-     * @function spawn
+     * @function enemy.spawn
      * @description Sets the initial position of an enemy object, off screen to the left and on a random row and velocity.
      */
     spawn() {
@@ -58,7 +58,7 @@ class Enemy {
     }
 
     /**
-     * @function update
+     * @function enemy.update
      * @description Calculates movement of the enemy object and resets position if object gets to edge of screen.
      * @param {number} dt The dt parameter will ensure the game runs at the same speed for all computers: a time delta between ticks.
      */
@@ -72,7 +72,7 @@ class Enemy {
 
     // Draw the enemy on the screen, required method for game
     /**
-     * @function render
+     * @function enemy.render
      * @description 1 Generates the sprite image on the game board.
      * @description 2 Detects collisions between an enemy object and the player object, then resets the player position.
      * @description 3 Generates the score in the bottom left of the game board.
@@ -119,7 +119,7 @@ let Player = function() {
 };
 
 /**
- * @function spawn
+ * @function player.spawn
  * @description Calculates the player initial position.
  */
 Player.prototype.spawn = function() {
@@ -129,7 +129,7 @@ Player.prototype.spawn = function() {
 }
 
 /**
- * @function update
+ * @function player.update
  * @description Resets player position at top of the board. Calls the victory func if win condition is met.
  */
 Player.prototype.update = function() {
@@ -145,7 +145,7 @@ Player.prototype.update = function() {
 };
 
 /**
- * @function renderEntities
+ * @function player.render
  * @description Generates the player sprite on the game board.
  */
 Player.prototype.render = function() {
