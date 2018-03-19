@@ -45,5 +45,5 @@ Follow the logical order provided in the instructions for the project. My approa
 
 **TODO:**
 
-12. Implement player sprite change option.
-This could not be completed due to a bug preventing the game running if any sprite other than char-boy.png was selected for the player object.
+12. Implement player sprite change option - This could not be completed due to a bug preventing the game running if any sprite other than char-boy.png was selected for the player object.
+13. Produce CSS modals to replace the use of the JS confirm, prompt and alert modals.
