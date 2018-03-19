@@ -24,10 +24,10 @@ You will receive a game won message once you reach the water for the tenth time.
 CONTRIBUTING.md contains contacts instructions for providing comment/feedback. I do not believe that I have produced the most efficient code possible and would welcome any feedback on alternative approaches to make the code more efficient.
 
 ## LICENSE
-This code is produced with a MIT license.
+This code is produced with a [MIT license] (https://opensource.org/licenses/MIT).
 
 ## Documentation
-jsdoc documentation is included in the "out" folder within the "js" directory. Open the index.html file within to view the documentation.
+[jsdoc] (http://usejsdoc.org/) documentation is included in the "out" folder within the "js" directory. Open the index.html file within to view the documentation.
 
 ## Tips for future students
 Follow the logical order provided in the instructions for the project. My approach proceeded as follows:
