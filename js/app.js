@@ -221,6 +221,7 @@ let player = new Player();
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
+        17: 'ctrl' // code from http://keycode.info/
         37: 'left',
         38: 'up',
         39: 'right',
