@@ -21,13 +21,13 @@ For detailed instructions on how to get started, check out this [guide](https://
 You will receive a game won message once you reach the water for the tenth time. A pop-up will offer the chance to play a new game.
 
 ## Contributing
-CONTRIBUTING.md contains contacts instructions for providing comment/feedback. I do not believe that I have produced the most efficient code possible and would welcome any feedback on alternative approaches to make the code more efficient.
+**CONTRIBUTING.md** contains contacts instructions for providing comment/feedback. I do not believe that I have produced the most efficient code possible and would welcome any feedback on alternative approaches to make the code more efficient.
 
 ## LICENSE
 This code is produced with a [MIT license](https://opensource.org/licenses/MIT).
 
 ## Documentation
-[jsdoc](http://usejsdoc.org/) documentation is included in the "out" folder within the "js" directory. Open the index.html file within to view the documentation.
+[jsdoc](http://usejsdoc.org/) documentation is included in the **"out"** folder within the **"js"** directory. Open the **index.html** file within to view the documentation.
 
 ## Tips for future students
 Follow the logical order provided in the instructions for the project. My approach proceeded as follows:
@@ -43,7 +43,7 @@ Follow the logical order provided in the instructions for the project. My approa
 10. Implement game score increment for player reaching the water.
 11. Implement game win condition and message display.
 
-TODO:
+**TODO:**
 
 12. Implement player sprite change option.
 This could not be completed due to a bug preventing the game running if any sprite other than char-boy.png was selected for the player object.
