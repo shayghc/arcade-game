@@ -1,3 +1,5 @@
+'use strict'
+
 /**
  * @fileOverview Arcade Game project for Udacity FEWD Nanodegree course.
  * @author Seamus Connolly <sghconnolly@gmail.com">
