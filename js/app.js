@@ -141,7 +141,7 @@ Player.prototype.spawn = function() {
  * @description Resets player position at top of the board. Calls the victory func if win condition is met.
  */
 Player.prototype.update = function() {
-    if (player.y === -8) {
+    if (this.y === -8) {
         setTimeout(function() {
             total++;
             if (total === 10) {
