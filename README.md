@@ -8,10 +8,11 @@ Students should use this [rubric](https://review.udacity.com/#!/projects/2696458
 For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
 
 ## How to Play
-1. When the game loads you will receive a prompt to enter degree of game difficulty. Choose from: 1 for easy, 2 for medium and 3 for difficult.
-2. Your player will begin at the bottom middle of the game board. Use the `space` bar to change the player sprite.
-3. Your player should be moved from the grass area at the bottom of the board to the water at the top of the board. You move the player by using the `arrow` keys.
-4. You will see bugs travelling from left to right across the board, at various speeds, in the paved area. These are your enemies and should be avoided.
+1. Load index.html in your favourite browser.
+2. When the game loads you will receive a prompt to enter degree of game difficulty. Choose from: 1 for easy, 2 for medium and 3 for difficult.
+3. Your player will begin at the bottom middle of the game board. Use the `space` bar to change the player sprite.
+4. Your player should be moved from the grass area at the bottom of the board to the water at the top of the board. You move the player by using the `arrow` keys.
+5. You will see bugs travelling from left to right across the board, at various speeds, in the paved area. These are your enemies and should be avoided.
 
 ## Scoring
 1. Your will increase your game score by one every time you player reaches the water without colliding with an enemy.
